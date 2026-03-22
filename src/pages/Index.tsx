@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import ResearchStepper from "@/components/ResearchStepper";
+import SkillsMatrix from "@/components/SkillsMatrix";
+import { Github } from "lucide-react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <HeroSection />
+      <ResearchStepper />
+      <SkillsMatrix />
+
+      {/* Footer */}
+      <footer className="py-8 px-4 text-center space-y-3">
+        <a
+          href="https://github.com/abhijeet-chowdhury/Process-AI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          <Github className="w-4 h-4" />
+          github.com/abhijeet-chowdhury/Process-AI
+        </a>
+        <p className="text-xs text-muted-foreground/60">
+          Built for the DC12 / MiningBrines Doctoral Network Application
+        </p>
+      </footer>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
